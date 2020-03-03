@@ -44,7 +44,7 @@ class StoryPage extends Page
     {
         $fields = parent::getCMSFields();
 
-        $fields->addFieldsToTab('Root.Main', array(
+        $fields->addFieldsToTab('Root.Main', [
             TextField::create('Publisher', 'Publisher'),
             TextField::create('SubTitle', 'SubTitle'),
             CheckboxField::create('Priority', 'Featured Story'),
@@ -52,15 +52,15 @@ class StoryPage extends Page
             DropdownField::create('StoryCategoryID', 'StoryCategory', StoryCategory::get()->map('ID', 'Title')),
             TextareaField::create('Blurb'),
             UploadField::create('Image', 'Image')->setFolderName('Stories/Story')
-        ), 'Content');
+        ], 'Content');
 
         $field = new DateField('PublishDate', 'Publish Date');
         $field->setDescription('e.g. 23 Nov 2016');
         //$field->setAttribute('placeholder', $field->getConfig('dateformat'));
         $fields->addFieldToTab('Root.Main', $field, 'Priority');
-        $fields->addFieldsToTab('Root.Main', array(
+        $fields->addFieldsToTab('Root.Main', [
             CheckboxField::create('PixelShouldShow')
-        ), 'Content');
+        ], 'Content');
 
         $fields->removeByName('Metadata');
         $fields->removeByName('BannerImage');
@@ -71,7 +71,7 @@ class StoryPage extends Page
     public function ParsedContent()
     {
         $html = $this->obj('Content')->forTemplate();
-        $html = str_replace(array("\r", "\n"), '', $html);
+        $html = str_replace(["\r", "\n"], '', $html);
         preg_match_all('/<p>.*?<\/p>/i', $html, $paras);
         $found = FALSE;
         if (count($paras[0]) > 0) {
@@ -92,7 +92,7 @@ class StoryPage extends Page
 
         foreach ($captions[0] as $i => $table) {
             $new_table = str_replace('<address', '<address class="left"', $captions[1][$i]);
-            $new_table .= str_replace(array('<td>', '</td>', '</tr>', '</tbody>'), '', $captions[2][$i]);
+            $new_table .= str_replace(['<td>', '</td>', '</tr>', '</tbody>'], '', $captions[2][$i]);
             $html = str_replace($table, $new_table, $html);
         }
         return $html;

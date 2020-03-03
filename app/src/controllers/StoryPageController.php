@@ -5,14 +5,14 @@ use SilverStripe\Control\RequestHandler;
 class StoryPageController extends PageController
 {
 
-    public static $allowed_actions = array(
+    public static $allowed_actions = [
         'json'
-    );
+    ];
 
     public function json()
     {
 
-        $data = array();
+        $data = [];
         $data['CurrentStory'] = $this;
 
         $request = RequestHandler::getRequest();
@@ -27,8 +27,8 @@ class StoryPageController extends PageController
             $story['StoryCategoryLink'] = $this->parent()->Link() . '#' . $this->StoryCategory()->URLSegment;
             $story['CategoryIcon'] = (!empty($this->StoryCategory()->ColourIconID)) ? $this->StoryCategory()->ColourIcon()->SetRatioSize(27, 27)->Link() : FALSE;
             $story['PanelImage'] = (!empty($this->ImageID)) ? $this->PanelImage()->Link() : FALSE;
-            $story['RelatedStories'] = array();
-            $story['RelatedStories'] = array();
+            $story['RelatedStories'] = [];
+            $story['RelatedStories'] = [];
             $story['PublishDate'] = (!empty($story['PublishDate'])) ? date('jS F Y', strtotime($story['PublishDate'])) : FALSE;
             $story['FacebookLink'] = $this->FacebookLink();
             $story['TwitterLink'] = $this->TwitterLink();

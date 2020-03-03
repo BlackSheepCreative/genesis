@@ -2,33 +2,29 @@
 
 namespace {
 
+    use SilverStripe\AssetAdmin\Forms\UploadField;
+    use SilverStripe\Assets\Image;
     use SilverStripe\CMS\Model\SiteTree;
-    use SilverStripe\Forms\TextField;
-    use SilverStripe\Security\Permission;
+    use SilverStripe\Forms\TextareaField;
+
 
     class Page extends SiteTree
     {
+
         private static $db = [
-            "SeoTitle" => "Text"
+            'BannerTitle' => 'Varchar(200)',
         ];
 
-        private static $has_one = [];
+        private static $has_one = [
+            'BannerImage' => Image::class,
+        ];
 
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();
-
-            $fields->addFieldsToTab("Root.Main", [
-                TextField::create("SeoTitle")
-                    ->setDescription("For if you're wanting to some fancy flare to your page titles.")
-            ], "MenuTitle");
-
+            $fields->addFieldToTab('Root.Main', TextareaField::create('BannerTitle'), 'Content');
+            $fields->addFieldToTab('Root.Main', UploadField::create('BannerImage')->setFolderName('BannerImages'), 'Content');
             return $fields;
-        }
-
-        public function IsAdmin()
-        {
-            return Permission::check("ADMIN");
         }
     }
 }

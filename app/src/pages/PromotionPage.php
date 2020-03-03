@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -39,26 +40,26 @@ class PromotionPage extends Page
 
         $fields->removeByName('BannerImage');
 
-        $fields->addFieldsToTab('Root.Banner', array(
+        $fields->addFieldsToTab('Root.Banner', [
             UploadField::create('BannerMobile')->setFolderName('promo-banner'),
             UploadField::create('BannerTablet')->setFolderName('promo-banner'),
             UploadField::create('BannerTabletLandscape')->setFolderName('promo-banner'),
             UploadField::create('BannerDesktop')->setFolderName('promo-banner')
-        ));
+        ]);
 
-        $fields->addFieldsToTab('Root.Card', array(
+        $fields->addFieldsToTab('Root.Card', [
             TextField::create('CardTitle', 'Title'),
             TextField::create('CardSubtitle', 'Sub Title'),
             TextField::create('CardBlurb', 'Blurb'),
             CheckboxField::create('CardShow', 'Show'),
             UploadField::create('CardPhoto')->setFolderName('promo-photo')
-        ));
-        $fields->addFieldsToTab('Root.VideoSection', array(
+        ]);
+        $fields->addFieldsToTab('Root.VideoSection', [
             TextField::create('VideoLink1')->setDescription('Just the video id from youtube'),
             UploadField::create('Image1')->setDescription('Image to use instead of video'),
             TextField::create('VideoLink2')->setDescription('Just the video id from youtube'),
             UploadField::create('Image2')->setDescription('Image to use instead of video')
-        ));
+        ]);
 
         $fields->addFieldsToTab('Root.CustomerReasons', [
             GridField::create(
