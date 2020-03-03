@@ -19,6 +19,11 @@ namespace {
             'BannerImage' => Image::class,
         ];
 
+        private static $owns = [
+            'BannerImage'
+        ];
+
+
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();

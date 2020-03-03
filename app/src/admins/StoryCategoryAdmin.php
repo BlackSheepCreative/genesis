@@ -4,8 +4,8 @@ use SilverStripe\Admin\ModelAdmin;
 
 class StoryCategoryAdmin extends ModelAdmin
 {
-    static $managed_models = [
-        'StoryCategory',
+    private static $managed_models = [
+        StoryCategory::class
     ];
-    static $url_segment = 'storycategory';
+    private static $url_segment = 'storycategory';
 }

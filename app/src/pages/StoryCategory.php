@@ -1,5 +1,6 @@
 <?php
 
+use RyanPotter\SilverStripeColorField\Forms\ColorField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Control\Session;
 use SilverStripe\ORM\DataObject;
@@ -22,6 +23,11 @@ class StoryCategory extends DataObject
 
     private static $has_many = [
         'StoryPages' => StoryPage::class,
+    ];
+
+    private static $owns = [
+        'ColourIcon',
+        'WhiteIcon'
     ];
 
     private static $many_many = [

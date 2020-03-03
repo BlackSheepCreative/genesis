@@ -34,6 +34,16 @@ class PromotionPage extends Page
         'PromoFAQs' => PromoFAQ::class
     ];
 
+    private static $owns = [
+        'BannerMobile',
+        'BannerTablet',
+        'BannerTabletLandscape',
+        'BannerDesktop',
+        'CardPhoto',
+        'Image1',
+        'Image2'
+    ];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

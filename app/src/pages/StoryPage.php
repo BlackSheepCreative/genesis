@@ -20,6 +20,10 @@ class StoryPage extends Page
 
     ];
 
+    private static $owns = [
+        'Image'
+    ];
+
     private static $db = [
         'Title' => 'Varchar(200)',
         'SubTitle' => 'Varchar(200)',
@@ -36,9 +40,9 @@ class StoryPage extends Page
     private static $summary_fields = [
         'Title' => 'Title',
         'Priority.Nice' => 'Priority'
+
     ];
 
-    private static $default_sort = 'Priority DESC, PriorityOrder DESC, ID DESC';
 
     public function getCMSFields()
     {
@@ -114,7 +118,7 @@ class StoryPage extends Page
                 return $this->Image();
                 break;
             default:
-                return $this->Image()->SetWidth(340);
+                return $this->Image()->ScaleWidth(340);
                 break;
         }
     }

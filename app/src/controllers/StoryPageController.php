@@ -5,7 +5,7 @@ use SilverStripe\Control\RequestHandler;
 class StoryPageController extends PageController
 {
 
-    public static $allowed_actions = [
+    private static $allowed_actions = [
         'json'
     ];
 

@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CheckboxSetField;
 
@@ -15,6 +16,9 @@ class StoryPageDisplay extends Page
     ];
     private static $has_one = [
         'BannerImage' => Image::class,
+    ];
+    private static $owns = [
+        'BannerImage'
     ];
 
     public function getCMSFields()

@@ -6,13 +6,17 @@ use SilverStripe\ORM\DataObject;
 class BusinessReason extends DataObject
 {
     private static $db = [
-        'Title' => Text::class,
-        'Blurb' => Text::class,
-        'Subnote' => Text::class
+        'Title' => 'Text',
+        'Blurb' => 'Text',
+        'Subnote' => 'Text'
     ];
 
     private static $has_one = [
         'Photo' => Image::class,
         'PromotionPage' => PromotionPage::class
+    ];
+
+    private static $owns = [
+        'Photo'
     ];
 }

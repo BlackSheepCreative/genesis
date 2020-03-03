@@ -13,7 +13,7 @@ namespace {
         public function init()
         {
             parent::init();
-            Session::set('FixedImages', TRUE);
+            //Session::set('FixedImages', TRUE);
             // Session::set('CurrentLink', $this->Link());
         }
     }

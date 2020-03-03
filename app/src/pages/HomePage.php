@@ -8,8 +8,5 @@
 class HomePage extends Page
 {
 
-    public function canCreate($member = null)
-    {
-        return false;
-    }
+
 }
