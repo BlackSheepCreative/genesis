@@ -19,7 +19,8 @@
         "silverstripe/lumberjack": "^2.0",
         "undefinedoffset/sortablegridfield": "^2.0",
         "bummzack/sortablefile": "^2.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ryanpotter/silverstripe-color-field": "^1.0"
     },
     "extra": {
         "project-files-installed": [

@@ -1,5 +1,5 @@
 let mix = require('laravel-mix');
-let localProxy = 'genesis.test';
+let localProxy = 'loyalty.test';
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
