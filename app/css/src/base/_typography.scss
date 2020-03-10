@@ -14,16 +14,31 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  margin-bottom: 10px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 // Responsive font presets
+%hero,
+.hero {
+    font: $font-regular 30px/30px $font-family-feature;
+    @include media($breakpoint-medium) {
+        font: $font-regular 60px/64px $font-family-feature;
+    }
+    @include media($breakpoint-large) {
+        font: $font-regular 90px/92px $font-family-feature;
+    }
+}
+
 %h1,
 .h1 {
-    font: $font-regular 22px/28px $font-family;
-    @include media($breakpoint-medium) { font: $font-regular 30px/38px $font-family; }
-    @include media($breakpoint-large) { font: $font-regular 36px/48px $font-family; }
+    font: $font-bold 24px/28px $font-family-feature;
+    @include media($breakpoint-medium) {
+        font: $font-bold 36px/40px $font-family-feature;
+    }
+    @include media($breakpoint-large) {
+        font: $font-bold 40px/44px $font-family-feature;
+    }
 }
 
 %h2,
@@ -35,23 +50,35 @@ h6 {
 
 %h3,
 .h3 {
-    font: $font-regular 16px/24px $font-family;
-    @include media($breakpoint-medium) { font: $font-regular 20px/30px $font-family; }
-    @include media($breakpoint-large) { font: $font-regular 20px/30px $font-family; }
+    font: $font-regular 24px/24px $font-family-feature;
+    @include media($breakpoint-medium) {
+        font: $font-regular 30px/33px $font-family-feature;
+    }
+    @include media($breakpoint-large) {
+        font: $font-regular 30px/33px $font-family-feature;
+    }
 }
 
 %p1,
 .p1 {
-    font: $font-light 16px/24px $font-family;
-    @include media($breakpoint-medium) { font: $font-light 18px/28px $font-family; }
-    @include media($breakpoint-large) { font: $font-light 18px/28px $font-family; }
+    font: $font-regular 24x/24px $font-family;
+    @include media($breakpoint-medium) {
+        font: $font-regular 24px/28px $font-family;
+    }
+    @include media($breakpoint-large) {
+        font: $font-regular 30px/33px $font-family;
+    }
 }
 
 %p2,
 .p2 {
-    font: $font-regular 15px/23px $font-family;
-    @include media($breakpoint-medium) { font: $font-regular 16px/24px $font-family; }
-    @include media($breakpoint-large) { font: $font-regular 16px/24px $font-family; }
+    font: $font-regular 20px/24px $font-family-feature;
+    @include media($breakpoint-medium) {
+        font: $font-regular 24px/28px $font-family-feature;
+    }
+    @include media($breakpoint-large) {
+        font: $font-regular 24px/28px $font-family-feature;
+    }
 }
 
 %p3,
@@ -63,8 +90,14 @@ h6 {
 
  %item,
 .item {
-    font: $font-regular 15px/15px $font-family;
-}
+     font: $font-regular 16px/24px $font-family-feature;
+     @include media($breakpoint-medium) {
+         font: $font-regular 16px/24px $font-family-feature;
+     }
+     @include media($breakpoint-large) {
+         font: $font-regular 16px/24px $font-family-feature;
+     }
+ }
 
 // Silverstripe CMS classes
 

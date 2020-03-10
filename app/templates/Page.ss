@@ -3,7 +3,8 @@
     <%-- Generates base element that makes all links relative to it --%>
     <% base_tag %>
     <title>
-        <% if $SeoTitle %>{$SeoTitle}&nbsp;|<% else_if not $isHome %>{$Title}&nbsp;|<% end_if %>&nbsp;{$SiteConfig.Title}
+        <% if $SeoTitle %>{$SeoTitle}&nbsp;|<% else_if not $isHome %>{$Title}&nbsp;|<% end_if %>
+        &nbsp;{$SiteConfig.Title}
     </title>
 
     <%-- Set character encoding for the document --%>
@@ -29,6 +30,8 @@
 
     <%-- Require CSS --%>
     <% require themedCSS('css/dist/app') %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:400,800&display=swap"
+          rel="stylesheet">
 
     <%-- Fav icons, etc --%>
     <% include MetaIcons %>

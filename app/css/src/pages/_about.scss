@@ -1,82 +1,165 @@
 .about {
     padding: 40px 15px;
+    @include media($breakpoint-medium) {
+        padding: 60px 40px;
+    }
+}
+
+.intro_section {
+    padding-bottom: 40px;
 }
 
 .intro_title {
+    @extend %hero;
+    color: $color-gray414042;
 
-    color: #414042;
-    font-family: "Playfair Display";
-    font-size: 40px;
     letter-spacing: -1px;
     line-height: 40px;
+    @include media($breakpoint-medium) {
+
+        line-height: 58px;
+    }
 }
 
-.about_info {
+.about_section {
+    margin-bottom: 60px;
+}
 
-    color: #92278F;
-    font-family: "Playfair Display";
-    font-size: 24px;
+.intro_body {
+    @extend %h3;
+    color: $color-purple;
+
     letter-spacing: -0.3px;
     line-height: 28px;
+    @include media($breakpoint-medium) {
+
+        letter-spacing: -0.35px;
+        line-height: 32px;
+    }
 }
 
-.about_introdescription {
-
+.intro_description {
+    @extend %p1;
     color: #747474;
     font-family: "Open Sans";
     font-size: 16px;
     line-height: 24px;
+    @include media($breakpoint-medium) {
+        width: 85%;
+    }
 }
 
+.about_description {
+    @extend %p1;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
 
 .about_title {
-    color: #414042;
-    font-family: "Playfair Display";
-    font-size: 30px;
-    line-height: 33px;
+    color: $color-gray414042;
+    @extend %h2;
+    //font-family: $font-family-feature;
+    //font-size: 30px;
+    //line-height: 33px;
+    //margin-bottom: 25px;
+    //@include media($breakpoint-medium) {
+    //    font-size: 36px;
+    //    line-height: 40px;
+    //
+    //}
 }
 
 .name {
-    height: 34px;
-    width: 260px;
-    color: #414042;
-    font-family: "Playfair Display";
+    @extend %h3;
+    color: $color-gray414042;
+    font-family: $font-family-feature;
     font-size: 24px;
     letter-spacing: -0.3px;
     line-height: 28px;
+    margin-bottom: 2px;
+    @include media($breakpoint-medium) {
+
+        font-size: 28px;
+        letter-spacing: -0.35px;
+        line-height: 32px;
+    }
 }
 
 .position {
-    height: 24px;
-    width: 260px;
-    color: #414042;
-    font-family: "Open Sans";
+    @extend %p1;
+    color: $color-gray414042;
+    font-family: $font-family;
     font-size: 16px;
     font-weight: bold;
     line-height: 24px;
+    margin-bottom: 2px;
 }
 
 .description {
-    height: 102px;
-    width: 260px;
-    color: #747474;
-    font-family: "Open Sans";
+    @extend %p1;
+    color: $color-gray;
+
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 2px;
 }
 
 .readmore {
-    height: 24px;
-    width: 260px;
-    color: #00B9F2;
-    font-family: "Open Sans";
+    @extend %item;
+    color: $color-light-blue;
+
     font-size: 13px;
-    font-weight: bold;
+    //font-weight: bold;
     line-height: 18px;
+    margin-bottom: 15px;
 }
 
-.card {
-    padding_bottom: 20px;
-    border: 1px solid #000000;
+.card_holder {
+    @include media($breakpoint-medium) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -12px;
+    }
+    @include media($breakpoint-large) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+
+
+}
+
+.card_item {
+    border: 1px solid #EEEEEE;
+    background-color: $color-white;
+    @include media($breakpoint-medium) {
+
+        margin: 10px 12px;
+        width: calc(50% - 24px);
+    }
+    @include media($breakpoint-large) {
+        margin: 20px 20px;
+        width: calc((100% / 3) - 40px);
+    }
+}
+
+.card__list {
+    margin-bottom: 20px;
+
+    width: 100%;
+    @include media($breakpoint-medium) {
+        display: flex;
+    }
+
+}
+
+.stakeholder__logo {
+    margin-bottom: 40px;
+}
+
+.image_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
