@@ -11,12 +11,10 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 
-class TeamMember extends DataObject
+class Shareholder extends DataObject
 {
     private static $db = [
-        "EmployeeName" => "Varchar(100)",
-        "EmployeePosition" => "Varchar(100)",
-        "EmployeeDescription" => "Varchar(100)",
+        "ShareholderName" => "Varchar(100)",
         "SortOrder" => "Int"
 
     ];
@@ -30,9 +28,9 @@ class TeamMember extends DataObject
         "Image"
     ];
     private static $summary_fields = [
-        "EmployeeName"
+        "ShareholderName"
     ];
-    private static $table_name = "TeamMember";
+    private static $table_name = "Shareholder";
     private static $default_sort = "SortOrder ASC";
 
     public function getCMSFields()
@@ -44,9 +42,7 @@ class TeamMember extends DataObject
         ]);
 
         $fields->addFieldsToTab("Root.Main", [
-            TextField::create("EmployeeName")->addExtraClass("stacked"),
-            TextField::create("EmployeePosition")->addExtraClass("stacked"),
-            TextareaField::create("EmployeeDescription")->addExtraClass("stacked"),
+            TextField::create("ShareholderName")->addExtraClass("stacked"),
             UploadField::create("Image", "Image")
         ]);
 

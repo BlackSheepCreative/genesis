@@ -11,7 +11,7 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 
-class TeamMember extends DataObject
+class BoardMember extends DataObject
 {
     private static $db = [
         "EmployeeName" => "Varchar(100)",
@@ -32,7 +32,7 @@ class TeamMember extends DataObject
     private static $summary_fields = [
         "EmployeeName"
     ];
-    private static $table_name = "TeamMember";
+    private static $table_name = "BoardMember";
     private static $default_sort = "SortOrder ASC";
 
     public function getCMSFields()

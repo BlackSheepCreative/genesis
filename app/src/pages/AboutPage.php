@@ -2,7 +2,9 @@
 
 namespace App\Page;
 
-use BSC\Models\Partner;
+use BSC\Models\Award;
+use BSC\Models\BoardMember;
+use BSC\Models\Shareholder;
 use BSC\Models\TeamMember;
 use Page;
 
@@ -21,8 +23,12 @@ class AboutPage extends Page
         "Intro_body" => "Text",
         "Intro_body_description" => "Text",
         "Team_title" => "Text",
-        "EmployeeName" => "Text",
-        "EmployeePosition" => "Text"
+        "Board_title" => "Text",
+        "Board_description" => "Text",
+        "Shareholders_title" => "Text",
+        "Shareholders_description" => "Text",
+        "Awards_title" => "Text",
+        "Awards_description" => "Text"
 
 
     ];
@@ -32,6 +38,10 @@ class AboutPage extends Page
     private static $owns = [];
     private static $has_many = [
         "TeamMembers" => TeamMember::class,
+        "BoardMembers" => BoardMember::class,
+        "Shareholders" => Shareholder::class,
+        "Awards" => Award::class,
+
     ];
 
     public function getCMSFields()
@@ -48,6 +58,24 @@ class AboutPage extends Page
         $fields->addFieldsToTab('Root.Team', [
             TextField::create("Team_title", "Team Title"),
             GridField::create("TeamMembers", "TeamMembers", $this->TeamMembers(), GridFieldConfig_RecordEditor::create())
+        ]);
+
+        $fields->addFieldsToTab("Root.Board", [
+            TextField::create("Board_title", "Board Title")->addExtraClass("stacked"),
+            TextareaField::create("Board_description", "Board Description")->addExtraClass("stacked"),
+            GridField::create("BoardMember", "BoardMembers", $this->BoardMembers(), GridFieldConfig_RecordEditor::create())
+        ]);
+
+        $fields->addFieldsToTab("Root.Shareholders", [
+            TextField::create("Shareholders_title", "Shareholders Title")->addExtraClass("stacked"),
+            TextareaField::create("Shareholders_description", "Shareholders description")->addExtraClass("stacked"),
+            GridField::create("Shareholder", "Shareholders", $this->Shareholders(), GridFieldConfig_RecordEditor::create())
+        ]);
+
+        $fields->addFieldsToTab("Root.Award", [
+            TextField::create("Awards_title", "Award Title")->addExtraClass("stacked"),
+            TextareaField::create("Awards_description", "Award Description")->addExtraClass("stacked"),
+            GridField::create("Award", "Awards", $this->Awards(), GridFieldConfig_RecordEditor::create())
         ]);
 
 

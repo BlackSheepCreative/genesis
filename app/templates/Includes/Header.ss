@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header__container">
         <a href="/" class="header__logo">
-            <img src="$ThemeDir/images/logo.svg" alt="Black Sheep Creative">
+            <img src="$ThemeDir/images/loyalty_logo.png" alt="" class="header__logo">
         </a>
         <button class="header__hamburger hamburger hamburger--3dxy" type="button">
         <span class="hamburger-box">
@@ -15,5 +15,16 @@
                 </li>
             <% end_loop %>
         </ul>
+
+        <div class="right">
+            <div class="social-list">
+                <div><img src="{$ThemeDir}/images/FlyBuysBlack.png" alt="" class="social-item"></div>
+                <div><img src="{$ThemeDir}/images/Lab360Black.png" alt="" class="social-item"></div>
+                <div><img src="{$ThemeDir}/images/Facebook.png" alt="" class="social-item"></div>
+                <div><img src="{$ThemeDir}/images/twitter.png" alt="" class="social-item"></div>
+                <div><img src="{$ThemeDir}/images/linkedin.png" alt="" class="social-item"></div>
+            </div>
+
+        </div>
     </div>
 </header>

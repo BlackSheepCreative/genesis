@@ -13,7 +13,7 @@
             <div class="card__list">
                 <% loop $TeamMembers %>
                     <div class="card_item">
-                        <img src="{$ThemeDir}/images/image.png" alt="">
+                        <img src="$Image.URL" alt="" class="card_image">
                         <div class="card-body">
                             <div class="name">$EmployeeName</div>
                             <div class="position">$EmployeePosition</div>
@@ -27,119 +27,62 @@
 
     </div>
     <div class="about_section">
-        <div class="about_title">Our Board</div>
+        <div class="about_title">$Board_title</div>
         <div class="content">
-            <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in lectus lacus.
-                Nullam cursus at est eget
-                accumsan. Etiam accumsan metus sed aliquam porta. Donec mollis lacus quis massa hendrerit pulvinar.
-                Morbi pellentesque, nibh non sollicitudin commodo, diam diam hendrerit metus, eget pretium nunc sapien
-                vitae libero. Maecenas ultricies sit amet lacus ut consectetur. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+            <p class="about_description">$Board_description
             </p>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
+            <div class="card_holder">
+                <div class="card__list">
+                    <% loop $BoardMembers %>
+                        <div class="card_item">
+                            <img src="$Image.URL" alt="" class="card_image">
+                            <div class="card-body">
+                                <div class="name">$EmployeeName</div>
+                                <div class="position">$EmployeePosition</div>
+                                <div class="description">$EmployeeDescription</div>
+                                <div class="readmore">READ MORE</div>
+                            </div>
+                        </div>
+                    <% end_loop %>
                 </div>
             </div>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
-                </div>
-            </div>
+
 
         </div>
     </div>
 
     <div class="about_section">
-        <div class="about_title">Our Stakeholders</div>
+        <div class="about_title">$Shareholders_title</div>
         <div class="content">
-            <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in lectus lacus.
-                Nullam cursus at est eget
-                accumsan. Etiam accumsan metus sed aliquam porta. Donec mollis lacus quis massa hendrerit pulvinar.
-                Morbi pellentesque, nibh non sollicitudin commodo, diam diam hendrerit metus, eget pretium nunc sapien
-                vitae libero. Maecenas ultricies sit amet lacus ut consectetur. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.</p>
+            <p class="about_description">$Shareholders_description</p>
             <div class="stakeholders">
-                <div class="stakeholder__logo">
-                    <img src="{$ThemeDir}/images/zenergy_logo.svg" class="image_logo">
-                </div>
-                <div class="stakeholder__logo">
-                    <img src="{$ThemeDir}/images/zenergy_logo.svg" class="image_logo">
-                </div>
-                <div class="stakeholder__logo">
-                    <img src="{$ThemeDir}/images/zenergy_logo.svg" class="image_logo">
-                </div>
-                <div class="stakeholder__logo">
-                    <img src="{$ThemeDir}/images/zenergy_logo.svg" class="image_logo">
-                </div>
+                <% loop $Shareholders %>
+                    <div class="stakeholder__logo">
+                        <img src="$Image.URL" class="image_logo">
+                    </div>
+                <% end_loop %>
             </div>
         </div>
     </div>
 
     <div class="about_section">
-        <div class="about_title">Business Highlights</div>
+        <div class="about_title">$Awards_title</div>
         <div class="content">
-            <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in lectus lacus.
-                Nullam cursus at est eget
-                accumsan. Etiam accumsan metus sed aliquam porta. Donec mollis lacus quis massa hendrerit pulvinar.
-                Morbi pellentesque, nibh non sollicitudin commodo, diam diam hendrerit metus, eget pretium nunc sapien
-                vitae libero. Maecenas ultricies sit amet lacus ut consectetur. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+            <p class="about_description">$Awards_description
             </p>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{$ThemeDir}/images/image.png" alt="">
-                <div class="card-body">
-                    <div class="name">Lizzy Ryley</div>
-                    <div class="position">CEO</div>
-                    <div class="description">Lizzy comes to us with extensive experience in the creation of innovative
-                        customer experience strategies that are both pragmatic…
-                    </div>
-                    <div class="readmore">READ MORE</div>
+            <div class="card_holder">
+                <div class="card__list">
+                    <% loop $Awards %>
+                        <div class="card_item">
+                            <img src="$Image.URL" alt="" class="card_image">
+                            <div class="card-body">
+                                <div class="name">$AwardName</div>
+                                <div class="position">$AwardPosition</div>
+                                <div class="description">$AwardInfoDescription</div>
+                                <div class="readmore">READ MORE</div>
+                            </div>
+                        </div>
+                    <% end_loop %>
                 </div>
             </div>
         </div>

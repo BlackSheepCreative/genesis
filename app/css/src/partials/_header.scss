@@ -1,5 +1,16 @@
 .header {
+    border-top: 4px solid $color-red-purple;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: 1px solid $color-medium-gray;
+    @include media($breakpoint-medium) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    @include media($breakpoint-large) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 .header__container {
@@ -20,10 +31,10 @@
 
 .header__logo {
     width: 200px;
-    margin-left: 25px;
+
 
     @include media($breakpoint-medium) {
-        margin-left: 40px;
+
     }
 
     img {
@@ -42,7 +53,7 @@
 
     @include media($breakpoint-large) {
         display: flex;
-        margin-left: auto;
+
         width: inherit;
     }
 
@@ -74,4 +85,21 @@
     @include media($breakpoint-large) {
         display: none;
     }
+}
+
+.hamburger-box {
+    color: $color-red-purple;
+}
+
+.social-list {
+    display: none;
+    @include media($breakpoint-large) {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.social-item {
+    margin: 15px;
 }

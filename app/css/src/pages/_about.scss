@@ -3,6 +3,9 @@
     @include media($breakpoint-medium) {
         padding: 60px 40px;
     }
+    @include media($breakpoint-large) {
+        padding: 70px 100px;
+    }
 }
 
 .intro_section {
@@ -116,13 +119,11 @@
 
 .card_holder {
     @include media($breakpoint-medium) {
-        display: flex;
-        flex-wrap: wrap;
+
         margin: 0 -12px;
     }
     @include media($breakpoint-large) {
-        display: flex;
-        flex-wrap: wrap;
+
         margin: 0 -20px;
     }
 
@@ -149,8 +150,13 @@
     width: 100%;
     @include media($breakpoint-medium) {
         display: flex;
+        flex-wrap: wrap;
     }
 
+}
+
+.card_image {
+    width: 100%;
 }
 
 .stakeholder__logo {
