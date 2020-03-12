@@ -1,5 +1,7 @@
 <header class="header">
+    <div class="border"></div>
     <div class="header__container">
+
         <a href="/" class="header__logo">
             <img src="$ThemeDir/images/loyalty_logo.png" alt="" class="header__logo">
         </a>
@@ -15,6 +17,7 @@
                 </li>
             <% end_loop %>
         </ul>
+
 
         <div class="right">
             <div class="social-list">
