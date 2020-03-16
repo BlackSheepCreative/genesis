@@ -30,6 +30,7 @@
 
     <%-- Require CSS --%>
     <% require themedCSS('css/dist/app') %>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:400,800&display=swap"
           rel="stylesheet">
 
@@ -62,6 +63,7 @@
     $Layout
 </div>
     <% include Footer %>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <% require themedJavascript('javascript/dist/app') %>
 
 <!-- Google Tag Manager (noscript) -->

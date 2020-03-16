@@ -1,12 +1,12 @@
 <?php
 
-//namespace App\Pages;
+namespace App\Page;
 //
 //use App\Controllers\HomePageController;
-//use Page;
+use Page;
 
 class HomePage extends Page
 {
-
+    private static $table_name = 'HomePage';
 
 }

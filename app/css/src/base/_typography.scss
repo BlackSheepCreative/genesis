@@ -88,26 +88,51 @@ h6 {
     @include media($breakpoint-large) { font: $font-regular 14px/18px $font-family; }
 }
 
- %item,
+%item,
 .item {
-     font: $font-regular 16px/24px $font-family-feature;
-     @include media($breakpoint-medium) {
-         font: $font-regular 16px/24px $font-family-feature;
-     }
-     @include media($breakpoint-large) {
-         font: $font-regular 16px/24px $font-family-feature;
-     }
- }
+    font: $font-regular 16px/24px $font-family-feature;
+    @include media($breakpoint-medium) {
+        font: $font-regular 16px/24px $font-family-feature;
+    }
+    @include media($breakpoint-large) {
+        font: $font-regular 16px/24px $font-family-feature;
+    }
+}
+
+%item-button,
+.item-button {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font: $font-semi-bold 13px/16px $font-family;
+}
 
 // Silverstripe CMS classes
 
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-justify { text-align: justify; }
+.text-left {
+    text-align: left;
+}
 
-img.left { float: left; margin: 0 20px 20px 0; }
-img.right { float: right; margin: 0 0 20px 20px; }
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+img.left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+img.right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
 
 img.leftAlone { display: block; margin: 0 20px 20px 0; }
 img.rightAlone { display: block; margin: 0 20px 20px 0; }

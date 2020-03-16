@@ -1,0 +1,61 @@
+.button {
+    @extend %item-button;
+    display: inline-block;
+    text-align: center;
+    min-width: 270px;
+    min-height: 48px;
+    padding: 18px 40px;
+    border-radius: $border-radius;
+    text-decoration: none;
+    transition: .3s background-color, .3s color;
+    width: 100%;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+
+    @include media($breakpoint-medium) {
+        width: auto;
+    }
+}
+
+.button--primary {
+    color: $color-purple;
+    background-color: $color-white;
+
+    &:hover {
+        background-color: $color-dark-gray;
+    }
+}
+
+.button--secondary {
+    background-color: transparent;
+    border: 1px $color-purple solid;
+    color: $color-purple;
+
+    &:focus,
+    &:target,
+    &:hover {
+        background-color: $color-purple;
+        color: $color-white;
+    }
+}
+
+.button--dynamic {
+    width: auto;
+    min-width: auto;
+}
+
+.button--active {
+    &.button--primary {
+        background-color: $color-dark-gray;
+    }
+
+    &.button--secondary {
+        background-color: $color-purple;
+        color: $color-white;
+    }
+}
+
+.button-no-radius {
+    border-radius: 0;
+}
