@@ -1,19 +1,37 @@
 <div class="slider">
-    <div class="slider_list">
-        <div class="slider_logo">
-            <img src="{$ThemeDir}/images/homeimage.png">
-        </div>
-        <div class="slider_logo">
-            <img src="{$ThemeDir}/images/homeimage.png">
-        </div>
-        <div class="slider_logo">
-            <img src="{$ThemeDir}/images/homeimage.png">
-        </div>
-    </div>
-
     <div class="slider_container">
-        <div class="slider_info">New Zealand’s expert on customer loyalty.</div>
-        <button class="button button--primary">our work</button>
+        <div class="slider_list">
+            <div class="slider_item">
+                <div class="slider_wrap">
+                    <img src="{$ThemeDir}/images/homeimage.png">
+                    <div class="slider_body">
+                        <div class="slider_info">New Zealand’s expert on customer loyalty.
+                        </div>
+                        <div class="button button--primary">our work</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_wrap">
+                    <img src="{$ThemeDir}/images/homeimage.png">
+                    <div class="slider_body">
+                        <div class="slider_info">New</div>
+                        <div class="button button--primary">our work</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_item">
+                <div class="slider_wrap">
+                    <img src="{$ThemeDir}/images/homeimage.png">
+                    <div class="slider_body">
+                        <div class="slider_info">New Zealand’s expert on customer loyalty.</div>
+                        <div class="button button--primary">our work</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 </div>
@@ -36,4 +54,9 @@
             <div class="button button--primary">our team</div>
         </div>
     </div>
+</div>
+
+<div class="follow_us">
+    <div class="follow_us_title">Follow us</div>
+
 </div>

@@ -21,6 +21,8 @@
 .button--primary {
     color: $color-purple;
     background-color: $color-white;
+    border: 1px $color-purple solid;
+    border-radius: 25px;
 
     &:hover {
         background-color: $color-dark-gray;

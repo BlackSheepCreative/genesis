@@ -1,71 +1,71 @@
 .slider {
     width: 100%;
-    height: 420px;
-    @include media($breakpoint-medium) {
-        height: 440px;
-    }
-
-    .slider_list {
-
-
-        @include media($breakpoint-medium) {
-            content: 'flickity';
-        }
-
-    }
-
-    .slider_logo {
-        width: 100%;
-        height: 150px;
-        background: green;
-        //@include media($breakpoint-medium) {
-        //    height: 420px;
-        //}
-        /* position dots in carousel */
-        .flickity-page-dots .dot {
-            border: 2px solid #9B9B9B;
-            background-color: white;
-
-            &.is-selected {
-                border-color: $color-purple;
-                background-color: #575757;
-            }
-        }
-
-    }
-
-    .slider_info {
-        @extend %hero;
-        margin-bottom: 26px;
-    }
 
     .slider_container {
         width: 100%;
-        height: 270px;
-        background: red;
+        @include media($breakpoint-medium) {
+            margin-bottom: 50px;
+        }
+
+        //background: red;
+
+    }
+
+
+    .slider_list {
+        .flickity-page-dots {
+            bottom: 0;
+        }
+
+    }
+
+    .slider_item {
+        width: 100%;
+
+        //background: green;
+
+    }
+
+    .slider_wrap {
+        position: relative;
+    }
+
+    .slider_body {
         padding: 20px 15px;
         @include media($breakpoint-medium) {
-            //height: 270px;
+            position: absolute;
+            top: 0;
             padding: 60px 40px;
+
         }
         @include media($breakpoint-large) {
             padding: 70px 100px;
         }
     }
 
-    .info {
-        height: 150px;
-        background: white;
-        margin-bottom: 15px;
-        //@include media($breakpoint-medium) {
-        //    height: 210px;
-        //}
+    .slider_info {
+        @extend %hero;
+        margin-bottom: 26px;
+        @include media($breakpoint-medium) {
+            width: 75%;
+        }
+        @include media($breakpoint-large) {
+            width: 80%;
+        }
+
     }
 
+
     .button {
-        //background: black;
-        width: 100%;
+        width: 290px;
         height: 50px;
+        @include media($breakpoint-medium) {
+            width: 210px;
+        }
+        @include media($breakpoint-large) {
+            width: 175px;
+
+        }
     }
 }
 
@@ -129,4 +129,15 @@
 
 
 }
+
+//.follow_us{
+//    padding: 20px 15px;
+//    @include media($breakpoint-medium) {
+//        //height: 270px;
+//        padding: 60px 40px;
+//    }
+//    @include media($breakpoint-large) {
+//        padding: 70px 100px;
+//    }
+//}
 
